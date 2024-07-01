@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 
 function App() {
@@ -9,11 +10,12 @@ function App() {
       <Navbar />
       <div className='uk-section'>
         <div className='uk-container uk-container-expand uk-light'>
-          <article class="uk-article">
+          <article className="uk-article">
             <ItemListContainer titulo={'Bienvenido a Flow Fitness'} mensaje={'Tienda online de equipos y accesorios de gimnasio de primera calidad.'} />
           </article>
         </div>
-      </div>
+      </div>      
+      <Footer />
     </div>
   )
 }

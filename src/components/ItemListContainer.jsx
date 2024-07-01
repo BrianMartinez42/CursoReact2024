@@ -2,8 +2,8 @@ const ItemListContainer = (prop) =>
 {
     return(
         <>
-            <h1 class="uk-article-title">{prop.titulo}</h1>
-            <p class="uk-text-lead">{prop.mensaje}</p>
+            <h1 className="uk-article-title">{prop.titulo}</h1>
+            <p className="uk-text-lead">{prop.mensaje}</p>
         </>
     )
 }

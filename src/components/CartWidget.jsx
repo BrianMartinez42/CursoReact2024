@@ -1,9 +1,11 @@
 const CartWidget = () =>{
     return(
         <>
-            <ul class="uk-iconnav">
-                <li><a href="#"><span uk-icon="icon: cart"></span> (1)</a></li>
-            </ul>
+            <li>
+                <a href="" class="uk-icon-button" uk-icon="cart">
+                    <span className="uk-badge">1</span>
+                </a>
+            </li>
         </>
     )
 }
