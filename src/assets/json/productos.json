@@ -1,0 +1,83 @@
+[
+    {
+        "id":1,
+        "title": "Mancuerna PVC 5Kg" ,
+        "description":"Mancuerna con un recubrimiento de PVC, esta pesa de 5kg es suave al tacto y cuenta con un agarre confortable, ideal para sesiones prolongadas. Está rellena de granalla metálica y cemento, sellada herméticamente para garantizar durabilidad y resistencia. Perfecta para cualquier rutina de entrenamiento, estas mancuernas combinan funcionalidad y diseño compacto.", 
+        "image":"/productos/mancuernapvc.webp", 
+        "price":"9999", 
+        "stock":25, 
+        "category":"mancuernas"
+    },
+    {
+        "id":2, 
+        "title": "Mancuerna Vinilo 10Kg" , 
+        "description":"Fabricadas en hierro de fundición para un menor tamaño y con la comodidad de sujetar el exterior de vinilo. Son versátiles para rehabilitación, entrenamiento aeróbico o de fuerza. Cada mancuerna tiene un exterior de vinilo antideslizante que es fácil de agarrar y no daña las superficies. El agarre es agradable al tacto, no lastima la mano aun con el sudor de una larga rutina.", 
+        "image":"/productos/mancuernavinilo.webp",  
+        "price":"40000", 
+        "stock":16, 
+        "category":"mancuernas"
+    },
+    {
+        "id":3, 
+        "title": "Mancuerna Hexagonal 15Kg" , 
+        "description":"Mancuerna con un recubrimiento de PVC, esta pesa de 5kg es suave al tacto y cuenta con un agarre confortable, ideal para sesiones prolongadas. Está rellena de granalla metálica y cemento, sellada herméticamente para garantizar durabilidad y resistencia. Perfecta para cualquier rutina de entrenamiento, estas mancuernas combinan funcionalidad y diseño compacto.", 
+        "image":"/productos/mancuernahexagonal.webp",  
+        "price":"55500", 
+        "stock":8, 
+        "category":"mancuernas"
+    },
+    {
+        "id":4, 
+        "title": "Caminador Elíptico 500EA" , 
+        "description":"Caminador Elíptico Athletic 500EA Con Asiento. Rueda de inércia: 5kg. Peso máximo del usuario: 110kg. Resistencia: Magnetica Manual. Asiento ajustable vertical-horizontal. Funciones: Velocidad, pulso, tiempo, calorías y distancia. Dimensiones: 1550x620x1290mm. Uso residencial. Peso 36.9kg.", 
+        "image":"/productos/caminador.webp",  
+        "price":"350000", 
+        "stock":4, 
+        "category":"maquinas"
+    },
+    {
+        "id":5, 
+        "title": "Cinta World Fitness 525Gs" , 
+        "description":"Motor de 2,5 HP (reales) y (2.75 HPP potenciados). Control de velocidad mediante botones en manillar de agarre derecho. Encendido y apagado en manillar izquierdo. Sistema de plegado rápido con traba de seguridad. Brazo hidráulico para plegar y desplegar sin esfuerzo. Sistema de amortización anti-impacto para evitar lesiones en articulaciones.", 
+        "image":"/productos/cinta.webp",  
+        "price":"600000", 
+        "stock":9, 
+        "category":"maquinas"
+    },
+    {
+        "id":6, 
+        "title": "Bicicleta Olmo Fit 230" , 
+        "description":"Olmo FIT 230 es una bicicleta de entrenamiento ideal para uso residencial en espacios reducidos. Está recomendada para usuarios con una altura máxima de 1.75 m y hasta 95 kg de peso. Posee un volante inercial de 4 kg, regulador manual magnético con 8 niveles de esfuerzo. El manillar tiene regulación de posición y sensores de pulso cardíaco. Su monitor tiene 6 funciones (velocidad / distancia / tiempo / calorías / pulso / scan) con soporte para tablet o celular. Utiliza 2 pilas AA (no incluidas).", 
+        "image":"/productos/bicicleta.webp",  
+        "price":"280000", 
+        "stock":10, 
+        "category":"maquinas"
+    },
+    {
+        "id":7, 
+        "title": "Multigym Randers 100Kg" , 
+        "description":"Adecuado para personas de hasta 1,95cm de altura. Carga: 100Kg. Tipo de ejercicios: polea baja, puentes, flexiones de biceps, biceps predicador, predicador reverso, curl de muñeca, curl de pierna, extensiones (cuadriceps), crunchies, brazo recto, mariposa, y prensa vertical de bancomariposa.", 
+        "image":"/productos/multigym.webp",  
+        "price":"920000", 
+        "stock":3, 
+        "category":"estructuras"
+    },
+    {
+        "id":8, 
+        "title": "Banco de Musculación" , 
+        "description":"Este equipo de gimnasio de color rojo, modelo ARG-130, es ideal para aquellos que buscan fortalecer y tonificar su cuerpo. Con un peso máximo de 115 Kg, este banco de pesas cuenta con una estructura reforzada, garantizando su durabilidad y resistencia. Ofrece 4 posiciones de inclinación, incluyendo una posición recta, permitiendo una variedad de ejercicios para trabajar diferentes grupos musculares. Además, cuenta con 4 rodillos foam para piernas, proporcionando comodidad durante el entrenamiento.", 
+        "image":"/productos/banco.webp",  
+        "price":"18000", 
+        "stock":17, 
+        "category":"estructuras"
+    },
+    {
+        "id":9, 
+        "title": "Rack Crossfit Easy Model" , 
+        "description":"El Rack Crossfit con Barra de Dominadas Easy Model de FARUFITNESS es el complemento perfecto para tus ejercicios de fuerza y halterofilia con el añadido de poder hacer ejercicios gracias a la barra de dominadas incluida. Puede soportar hasta 320kg y viene con apoya barras regulables con 12 posiciones, regatones anti-desliz y una gran capacidad de carga de discos de 30mm para poder agregarle más peso a la base para generar mayor estabilidad. ", 
+        "image":"/productos/rack.webp",  
+        "price":"25000", 
+        "stock":6, 
+        "category":"estructuras"
+    }
+]

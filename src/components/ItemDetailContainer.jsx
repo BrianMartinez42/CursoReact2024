@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react"
 import arrayProductos from "../assets/json/productos.json"
-import ItemList from "./ItemList"
+import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
 
-    const [items, setItems] = useState([]);
+    const [item, setItems] = useState({});
     const {id} = useParams();
 
     useEffect( () => {
         const promesa = new Promise(resolve => {
             setTimeout(() => {
-                resolve(id ? arrayProductos.filter(item => item.category == id): arrayProductos)
+                resolve(arrayProductos.find(item => item.id == id))
             }, 2000);
         })
 
@@ -19,15 +19,11 @@ const ItemListContainer = () => {
             setItems(response)
         })
 
-    }, [id]) 
+    }, []) 
 
     return(
-        <>
-            <div className="uk-child-width-1-3 uk-grid">
-                <ItemList items={items}/>
-            </div>
-        </>
+        <ItemDetail item={item}/>
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
