@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import arrayProductos from "../assets/json/productos.json"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
+import { getDoc, getFirestore} from "firebase/firestore"
 
 const ItemListContainer = () => {
 
@@ -20,6 +21,21 @@ const ItemListContainer = () => {
         })
 
     }, [id]) 
+
+    // useEffect(() =>{
+    //     const db = getFirestore();
+    //     const docRef = doc(db, "items","ID DEL ITEM");
+    //     getDoc(docRef).then(documento =>{
+    //         console.log(documento);
+    //         if(documento.exists()){
+    //             setItems({id:documento.id, ...documento.data()})
+    //             console.log("ID",documento.id);
+    //             console.log(documento.date());
+    //         }else{
+    //             console.log("No existe");
+    //         }
+    //     })
+    // }, [])
 
     return(
         <>
