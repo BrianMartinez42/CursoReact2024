@@ -2,3 +2,8 @@
     padding-inline-end: 10px;
     padding-inline-start: 10px;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }

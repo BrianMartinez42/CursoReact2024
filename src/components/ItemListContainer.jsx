@@ -1,41 +1,25 @@
 import { useEffect, useState } from "react"
-import arrayProductos from "../assets/json/productos.json"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
-import { getDoc, getFirestore} from "firebase/firestore"
+import { addDoc, collection, doc, getDoc, getDocs, getFirestore, limit, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
     const {id} = useParams();
 
-    useEffect( () => {
-        const promesa = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(id ? arrayProductos.filter(item => item.category == id): arrayProductos)
-            }, 2000);
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+        const q = id ? query(itemsCollection, where("category", "==", id)) : itemsCollection;
+        getDocs(q).then(snapShot => {
+            if (snapShot.size > 0) {
+                setItems(snapShot.docs.map(documento => ({id:documento.id, ...documento.data()})));
+            } else {
+                console.error("Error! No existe la Colección 'items'!");
+            }
         })
-
-        promesa.then(response => {
-            setItems(response)
-        })
-
-    }, [id]) 
-
-    // useEffect(() =>{
-    //     const db = getFirestore();
-    //     const docRef = doc(db, "items","ID DEL ITEM");
-    //     getDoc(docRef).then(documento =>{
-    //         console.log(documento);
-    //         if(documento.exists()){
-    //             setItems({id:documento.id, ...documento.data()})
-    //             console.log("ID",documento.id);
-    //             console.log(documento.date());
-    //         }else{
-    //             console.log("No existe");
-    //         }
-    //     })
-    // }, [])
+    }, [id])
 
     return(
         <>

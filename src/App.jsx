@@ -12,10 +12,10 @@ function App() {
   return (
     <CartContextProvider>
       <BrowserRouter> 
-        <div className='uk-background-secondary uk-height-viewport'>
+        <div className='uk-background-secondary uk-height-viewport uk-flex uk-flex-column'>
           <Navbar />
 
-          <div className='uk-section'>
+          <div className='uk-section uk-flex-1'>
             <div className='uk-container uk-container-expand uk-light'>
               <article className="uk-article">
                 <Routes>
