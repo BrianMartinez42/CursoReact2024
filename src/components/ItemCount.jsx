@@ -35,14 +35,14 @@ const ItemCount = ({stock, onAdd}) => {
         <>
             { visible ? 
                 <div>
-                    <div className="uk-align-center ">
-                        <button className="uk-button uk-button-secondary uk-button-small" onClick={decrementar}>-</button>
-                        <button className="uk-button uk-button-secondary uk-button-small">{contador}</button>
-                        <button className="uk-button uk-button-secondary uk-button-small" onClick={incrementar}>+</button>
+                    <div className="uk-align-center uk-button-group">
+                        <button className="uk-button uk-background-secondary uk-light uk-button-small" onClick={decrementar}>-</button>
+                        <button className="uk-button uk-background-secondary uk-light uk-button-small">{contador}</button>
+                        <button className="uk-button uk-background-secondary uk-light uk-button-small" onClick={incrementar}>+</button>
                     </div>
-                    <button className="uk-button uk-button-secondary uk-button-small uk-border-pill" onClick={addToCart}>Agregar al Carrito</button>
+                    <button className="uk-button uk-border-pill uk-background-secondary uk-light" onClick={addToCart}>Agregar al Carrito</button>
                 </div>
-            : <Link to={"/cart"} className="uk-button uk-button-secondary uk-button-small uk-border-pill">Terminar mi compra</Link>}
+            : <Link to={"/cart"} className="uk-button uk-background-secondary uk-light uk-button-small uk-border-pill">Terminar mi compra</Link>}
         </> 
     )
 }

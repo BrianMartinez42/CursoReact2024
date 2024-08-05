@@ -9,7 +9,7 @@ const Cart = () => {
         return (
             <div className="uk-text-center">
                 <h1 >Tu carrito está vacío.</h1>
-                <Link to={"/"} className="uk-button uk-button-default uk-button-small uk-border-pill">Volver al Inicio</Link>
+                <Link to={"/"} className="uk-button uk-button-default uk-button-medium uk-border-pill">Volver al Inicio</Link>
             </div>
         )
     }
@@ -23,7 +23,6 @@ const Cart = () => {
                     </tr>
                     {cart.map(item => (
                         <tr key={item.id}>
-                            {/* <td><input className="uk-checkbox" type="checkbox" aria-label="Checkbox"/></td> */}
                             <td><img className="uk-preserve-width uk-border-circle" src={item.image} width="65" height="65" alt=""/></td>
                             <td className="uk-text-nowrap">{item.title}</td>
                             <td className="uk-text-nowrap">${item.price} ({item.quantity})</td>
@@ -34,7 +33,7 @@ const Cart = () => {
                     <tr>
                         <td colSpan={3} className="uk-text-center">Total a Pagar</td>
                         <td>${sumProducts()}</td>
-                        <td>&nbsp;</td>
+                        <td><Link to={"/checkout"} className="uk-button uk-button-default uk-button-small uk-border-pill">Checkout</Link></td>
                     </tr>
                 </tbody>
             </table>
