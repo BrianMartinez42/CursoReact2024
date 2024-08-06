@@ -60,8 +60,9 @@ const Checkout = () => {
     }
 
     return (
-        <div className="uk-column-1-2 uk-column-divider">
+        <div className="uk-column-1-2@m uk-column-divider">
             <div className="uk-overflow-auto">
+                <h3 className="uk-text-center uk-heading-divider">Datos del Comprador</h3>
                 <form className="uk-form-horizontal uk-margin-large">
 
                     <div className="uk-margin">
@@ -85,10 +86,11 @@ const Checkout = () => {
                         </div>
                     </div>
                 </form>
-                <div className="uk-text-center"> <button className="uk-button uk-button-default uk-border-pill" onClick={generarOrden}>Generar Orden</button> </div>
+                <div className="uk-text-center uk-margin-medium-bottom"> <button className="uk-button uk-button-default uk-border-pill" onClick={generarOrden}>Generar Orden</button> </div>
             </div>
 
             <div className="uk-overflow-auto">
+                <h3 className="uk-text-center uk-heading-divider">Productos</h3>
                 <table className="uk-table uk-table-hover uk-table-middle uk-table-divider">
                     <tbody>
                         {cart.map(item => (
@@ -106,7 +108,6 @@ const Checkout = () => {
                     </tbody>
                 </table>
             </div>
-
         </div>
     )
 }

@@ -42,7 +42,7 @@ const ItemCount = ({stock, onAdd}) => {
                     </div>
                     <button className="uk-button uk-border-pill uk-background-secondary uk-light" onClick={addToCart}>Agregar al Carrito</button>
                 </div>
-            : <Link to={"/cart"} className="uk-button uk-background-secondary uk-light uk-button-small uk-border-pill">Terminar mi compra</Link>}
+            : <Link to={"/cart"} className="uk-button uk-background-secondary uk-light uk-border-pill">Terminar mi compra</Link>}
         </> 
     )
 }

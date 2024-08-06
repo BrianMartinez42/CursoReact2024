@@ -16,12 +16,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA2gmpXpLIQvsnbiR4odf80J-dCM9V6_XY",
-  authDomain: "flowfitness-101ac.firebaseapp.com",
-  projectId: "flowfitness-101ac",
-  storageBucket: "flowfitness-101ac.appspot.com",
-  messagingSenderId: "724680133194",
-  appId: "1:724680133194:web:4c4c80f1e0bcb031d874b3"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

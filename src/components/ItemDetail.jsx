@@ -15,7 +15,9 @@ const ItemDetail = ({item}) => {
                 <img src={item.image} className="uk-align-center uk-align-left@m uk-margin-remove-adjacen" width="500" height="500" alt=""/>
                 <h3 className="uk-card-title">{item.title}</h3>
                 <p>{item.description}</p>
-                <ItemCount stock={item.stock} onAdd={onAdd}/>
+                <div className="uk-text-center uk-align-left@m uk-margin-medium-bottom">
+                    <ItemCount stock={item.stock} onAdd={onAdd}/>
+                </div>
             </div>
         </>
     )

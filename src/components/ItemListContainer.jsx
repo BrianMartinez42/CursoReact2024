@@ -25,9 +25,11 @@ const ItemListContainer = () => {
 
     return(
         <>
+        {loading ? <Loading/> :
             <div className="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid">
-                { loading ? <Loading/> : <ItemList items={items}/> }
+                <ItemList items={items}/> 
             </div>
+        }
         </>
     )
 }

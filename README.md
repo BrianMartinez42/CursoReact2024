@@ -1,8 +1,5 @@
-# React + Vite
+# Curso Coderhouse 2024
+## Proyecto Final de React JS
+### Flow Fitness (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bienvenido al proyecto de **Flow Fitness**. Esta aplicación web está diseñada para ofrecer una experiencia de compra moderna y fluida para artículos de gimnasio, construida utilizando React.js y Vite.
