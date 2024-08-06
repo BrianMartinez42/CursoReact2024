@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
-import { addDoc, collection, doc, getDoc, getDocs, getFirestore, limit, query, where } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import Loading from "./Loading";
 
 const ItemListContainer = () => {
-
+    const [loading, setLoading] = useState(true);
     const [items, setItems] = useState([]);
     const {id} = useParams();
 
@@ -15,6 +16,7 @@ const ItemListContainer = () => {
         getDocs(q).then(snapShot => {
             if (snapShot.size > 0) {
                 setItems(snapShot.docs.map(documento => ({id:documento.id, ...documento.data()})));
+                setLoading(false);
             } else {
                 console.error("Error! No existe la Colección 'items'!");
             }
@@ -23,8 +25,8 @@ const ItemListContainer = () => {
 
     return(
         <>
-            <div className="uk-child-width-1-3 uk-grid">
-                <ItemList items={items}/>
+            <div className="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid">
+                { loading ? <Loading/> : <ItemList items={items}/> }
             </div>
         </>
     )

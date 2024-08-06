@@ -5,7 +5,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import UIkit from 'uikit';
 
 const Checkout = () => {
-    const {cart, totalProducts, sumProducts} = useContext(CartContext);
+    const {cart, totalProducts, sumProducts, clear} = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -30,27 +30,38 @@ const Checkout = () => {
             total: sumProducts()
         }
 
+        clear();
         const db = getFirestore();
         const orderCollection = collection(db, "orders");
         addDoc(orderCollection, order).then(response => {
             setOrderId(response.id);
+            UIkit.modal("#modal-compra").show();
         })
-
-        UIkit.modal("#modal-compra").show();
     }
 
     if(totalProducts() == 0){
         return (
-            <div className="uk-text-center">
-                <h1 >Tu carrito está vacío.</h1>
-                <Link to={"/"} className="uk-button uk-button-default uk-button-medium uk-border-pill">Volver al Inicio</Link>
+            <div>
+                <div className="uk-text-center">
+                    <h1 >Tu carrito está vacío.</h1>
+                    <Link to={"/"} className="uk-button uk-button-default uk-button-medium uk-border-pill">Volver al Inicio</Link>
+                </div>
+                <div id="modal-compra">
+                    <div className="uk-modal-dialog uk-modal-body">
+                        <h2 className="uk-modal-title">¡Gracias por tu compra!</h2>
+                        <p>El Número de tu orden es: <b>{orderId}</b></p>
+                        <p className="uk-text-right">
+                            <Link to={"/"} className="uk-button uk-button-secondary">Volver al Inicio</Link>
+                        </p>
+                    </div>
+                </div>
             </div>
         )
     }
 
     return (
         <div className="uk-column-1-2 uk-column-divider">
-            <div>
+            <div className="uk-overflow-auto">
                 <form className="uk-form-horizontal uk-margin-large">
 
                     <div className="uk-margin">
@@ -76,6 +87,7 @@ const Checkout = () => {
                 </form>
                 <div className="uk-text-center"> <button className="uk-button uk-button-default uk-border-pill" onClick={generarOrden}>Generar Orden</button> </div>
             </div>
+
             <div className="uk-overflow-auto">
                 <table className="uk-table uk-table-hover uk-table-middle uk-table-divider">
                     <tbody>
@@ -93,16 +105,6 @@ const Checkout = () => {
                         </tr>
                     </tbody>
                 </table>
-                
-                <div id="modal-compra">
-                    <div className="uk-modal-dialog uk-modal-body">
-                        <h2 className="uk-modal-title">¡Gracias por tu compra!</h2>
-                        <p>El Número de tu orden es: <b>{orderId}</b></p>
-                        <p className="uk-text-right">
-                            <Link to={"/"} className="uk-button uk-button-secondary">Volver al Inicio</Link>
-                        </p>
-                    </div>
-                </div>
             </div>
 
         </div>
